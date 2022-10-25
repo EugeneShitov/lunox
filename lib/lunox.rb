@@ -10,9 +10,6 @@ class CreateHTML
       <html lang="en">
       <head>
           <meta charset="UTF-8">
-          <meta name="viewport"
-                content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-          <meta http-equiv="X-UA-Compatible" content="ie=edge">
           <title>#{file_name}</title>
       </head>
       <body>
@@ -33,6 +30,6 @@ class CreateHTML
   end
 
   def open_in_browser(file: 'index.html')
-    Launchy::Browser.run(file)
+    Launchy::Browser.run("/Users/eugene_shitov/RubymineProjects/lunox/#{file}")
   end
 end
