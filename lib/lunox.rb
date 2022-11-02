@@ -1,6 +1,4 @@
 require 'nokogiri'
-require 'launchy'
-
 class CreateHTML
   def create_html(content, bypass_html, file_name: 'index.html')
     markup = content.gsub!(/[<>]/, '') if bypass_html == false
@@ -29,7 +27,7 @@ class CreateHTML
     file.close
   end
 
-  def open_in_browser(file: 'index.html')
-    Launchy::Browser.run("/Users/eugene_shitov/RubymineProjects/lunox/#{file}")
+  def open_in_browser(file_name: 'index.html')
+    system("open ./#{file_name}")
   end
 end
